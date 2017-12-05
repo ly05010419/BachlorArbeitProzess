@@ -1,0 +1,29 @@
+
+<form class="form-horizontal">
+  
+  <div class="control-group" >
+    <label class="control-label">Thema</label>
+    <div class="controls">
+      <input type="text" 
+             cam-variable-name="title"
+             readonly="true" 
+             class="form-control" />      
+    </div>
+    
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label">Ist das Thema geeignet ?</label>
+    <div class="controls">
+      <input type="checkbox"
+             cam-variable-name="geeignet"
+             cam-variable-type="Boolean"
+             name="geeignet"
+             class="form-control" />
+    </div>
+  </div>
+
+  <script cam-script type="text/form-script">
+  // custom JavaScript goes here
+  </script>
+</form>

@@ -1,0 +1,36 @@
+
+
+<form class="form-horizontal">
+
+	<script cam-script type="text/form-script">
+  	camForm.on('form-loaded', function() {
+      
+      	camForm.variableManager.fetchVariable('studentId');
+		camForm.variableManager.fetchVariable('studentemail');
+		camForm.variableManager.fetchVariable('title');
+    });
+    camForm.on('variables-fetched', function() {
+      
+      	$scope.customerData = camForm.variableManager.variable('studentId').value;
+		$scope.customerData = camForm.variableManager.variable('studentemail').value;
+		$scope.customerData = camForm.variableManager.variable('title').value;
+    });
+</script>
+
+
+
+	<strong>Bitte Bereuer auswählen {{studentId}} {{studentemail}} {{title}}</strong>
+	
+	<label for="studentId">Customer ID</label>
+	<label cam-variable-name="studentId">Customer ID</label>
+	
+	
+	<p></p>
+
+	<select cam-variable-name="supervisor" cam-variable-type="String">
+		<option>professor</option>
+		<option>peter</option>
+		<option>john</option>
+		<option>mary</option>
+	</select>
+</form>

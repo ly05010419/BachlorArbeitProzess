@@ -1,0 +1,41 @@
+
+<form class="form-horizontal">
+  
+<strong>Kolloquium von {{studentPrename}} {{studentName}} bewerten.</strong>
+<p>
+  
+</p>
+
+
+  <div class="control-group" style="display:none" >
+    <label class="control-label">Thema</label>
+    <div class="controls">
+      <input type="text" 
+             cam-variable-name="studentName"
+             readonly="true" 
+             class="form-control" />      
+    </div>
+    
+    <div class="controls">
+      <input type="text" 
+             cam-variable-name="studentPrename"
+             readonly="true" 
+             class="form-control" />      
+    </div>
+    
+  </div>
+  <div class="control-group">
+    <label class="control-label">bestanden ?</label>
+    <div class="controls">
+      <input type="checkbox"
+             cam-variable-name="bestanden"
+             cam-variable-type="Boolean"
+             name="bestanden"
+             class="form-control" />
+    </div>
+  </div>
+
+  <script cam-script type="text/form-script">
+  // custom JavaScript goes here
+  </script>
+</form>
